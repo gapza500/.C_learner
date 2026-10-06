@@ -6,11 +6,11 @@ int main() {
         struct SensorReading reading;
         reading.sensor_id = i+1;
         printf("Enter PM2.5 value for sensor %d: ", reading.sensor_id);
-        scanf("%lf", &reading.pm2_5);
+        reading.pm2_5 = question("PM2.5");
         printf("Enter temperature value for sensor %d: ", reading.sensor_id);
-        scanf("%lf", &reading.temperature);
+        reading.temperature = question("temperature");
         printf("Enter humidity value for sensor %d: ", reading.sensor_id);
-        scanf("%lf", &reading.humidity);
+        reading.humidity = question("humidity");
         reading.status = sensorDetection(reading);
     };
 }
