@@ -27,7 +27,6 @@ double question(char text[]) {
 
             case 0:
                 printf("ข้อมูลไม่ถูกต้อง please try again\n");
-                break;
 
             case EOF:
                 printf("program ending อินพุตสิ้นสุด\n");
