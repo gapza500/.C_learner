@@ -16,14 +16,18 @@ enum Status sensorDetection(struct SensorReading reading) {
 double question(char text[]) {
     double done = 0;
     double input;
+    char line[11];
     do {
         printf("Enter value for %s: ", text);
-        int result_status = scanf("%lf", &input);
-        switch (result_status) {
-            case 1:
-                printf("อ่าน %s สำเร็จ\n", text);
-                done = 1;
-                return input;
+        fgets(line, sizeof line, stdin);
+        if (sscanf(line, "%lf", &input) == 1) {
+            printf("อ่าน %s สำเร็จ\n", text);
+            done = 1;
+            return input;
+        } else {
+            printf("ข้อมูลไม่ถูกต้อง please try again\n");
+        }
+    } while (done == 0);
 
             case 0:
                 printf("ข้อมูลไม่ถูกต้อง please try again\n");
