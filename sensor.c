@@ -28,18 +28,3 @@ double question(char text[]) {
             printf("ข้อมูลไม่ถูกต้อง please try again\n");
         }
     } while (done == 0);
-
-            case 0:
-                printf("ข้อมูลไม่ถูกต้อง please try again\n");
-                getchar();
-
-            case EOF:
-                printf("program ending อินพุตสิ้นสุด\n");
-                break;
-
-            default:
-                printf("ค่าอื่นที่ไม่ได้ระบุไว้ please try again\n");
-                break;
-        }
-    } while (done == 0);
-}
